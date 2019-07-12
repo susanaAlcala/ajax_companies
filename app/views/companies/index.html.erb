@@ -1,0 +1,22 @@
+<h1>Ingresa nueva empresa</h1>
+
+<%= render 'form', company: @company  %>
+
+<h1>Lista de empresas</h1>
+
+<table>
+   <thead>
+       <tr>
+           <th>Name</th>
+           <th colspan="3"></th>
+       </tr>
+   </thead>
+
+   <tbody id = "companies">
+       <%= render @companies %>
+   </tbody>
+</table>
+
+<br>
+
+

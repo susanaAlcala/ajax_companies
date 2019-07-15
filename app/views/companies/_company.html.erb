@@ -1,7 +1,7 @@
 
 <tr id='row_<%= company.id %>'>
     <td id="company_<%=company.id%>"><%= company.name %></td>
-    <td><%= link_to 'Show', company, class: "show_company", data: {remote: true} %></td>
-    <td><%= link_to 'Edit', edit_company_path(company), class: 'edit_company', data: {remote: true} %></td>
-    <td><%= link_to 'Destroy', company, class: 'delete_company', method: :delete, data: {remote: true} %></td>
+    <td><%= link_to 'Detalle', company, data: {remote: true} %></td>
+    <td><%= link_to 'Editar', edit_company_path(company), data: {remote: true} %></td>
+    <td><%= link_to 'Eliminar', company, method: :delete, data: {confirm: '¿Estás seguro de eliminar la empresa?', remote: true} %></td>
 </tr>

@@ -12,6 +12,8 @@ gem 'devise', git: 'https://github.com/plataformatec/devise.git'
 
 gem 'faker'
 
+gem 'activeadmin'
+
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets

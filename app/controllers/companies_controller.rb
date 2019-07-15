@@ -1,5 +1,6 @@
 class CompaniesController < ApplicationController
   before_action :set_company, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, except: [:index]
 
   # GET /companies
   # GET /companies.json
@@ -12,6 +13,10 @@ class CompaniesController < ApplicationController
   # GET /companies/1
   # GET /companies/1.json
   def show
+    #@claims = Claims.order(created_at: :desc)
+    respond_to do |format|
+        format.js {}
+    end
   end
 
   # GET /companies/new
@@ -36,7 +41,7 @@ class CompaniesController < ApplicationController
       else
         format.html { render :new }
         format.json { render json: @company.errors, status: :unprocessable_entity }
-        format.js {}
+        format.js {render :error , status: :unprocessable_entity }
       end
     end
   end
